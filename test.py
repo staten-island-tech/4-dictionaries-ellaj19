@@ -14,14 +14,22 @@ for i in range(0, len(CafeItemList)):
     print(CafeItemList[i]["name"])
     int(input("what would you like to buy?")) """
 
-def language(x):
+""" def language(x):
        x = x.lower()
-        scount = x.count("s")
-        tcount = x.count("t")
-        if scount > tcount:
+    scount = x.count("s")
+    tcount = x.count("t")
+    if scount > tcount:
          print("english")
-        elif tcount >= scount:
+    elif tcount >= scount:
                  print("french")
-        else:
-                 print("idk")
+    else:
+                 print("idk") """
 
+def parkinglot(x):
+    carcount = x.count("C")
+    carcount2 = x.count("CC")
+    carcount2 = carcount2 * 2
+    print(carcount-carcount2)
+    
+parkinglot("CC..C.CC..")
+    
