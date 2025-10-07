@@ -25,11 +25,46 @@ for i in range(0, len(CafeItemList)):
     else:
                  print("idk") """
 
-def parkinglot(x):
+""" def parkinglot(x):
     carcount = x.count("C")
     carcount2 = x.count("CC")
     carcount2 = carcount2 * 2
     print(carcount-carcount2)
     
-parkinglot("CC..C.CC..")
+parkinglot("CC..C.CC..")"""
+ 
+
+""" def language(x):
+    t = 0
+    s = 0
+    for char in x: 
+        if char == "s" or char == "S":
+            s += 1
+        elif char == "T" or char == "t":
+            t += 1
+    if s >= t:
+        print("French")
+    else:
+        print("English") 
+
+language("unicornunicornunicorn")  """
+
+def spaces(x,y):
+    l = 0
+    t = 0
+    for char in x:
+        if char == "C":
+            l += 1
+    for char in y:
+        if char == "C":
+            t += 1
+    print(l-t)
+
+spaces("CC..C",".CC..")
+
+
+
+
+
     
+
