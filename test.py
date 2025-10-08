@@ -49,19 +49,15 @@ parkinglot("CC..C.CC..")"""
 
 language("unicornunicornunicorn")  """
 
-def spaces(x,y):
-    l = 0
-    t = 0
-    for char in x:
-        if char == "C":
-            l += 1
-    for char in y:
-        if char == "C":
-            t += 1
-    print(l-t)
-
-spaces("CC..C",".CC..")
-
+def spaces(n,x,y):
+    occupied = 0
+    for i in range(n):  
+        print(x[i],y[i])
+        if x[i] == "C" and y[i] == "C":
+            occupied += 1
+    return(occupied)
+            
+print(spaces(5,"CC..C",".CC.."))
 
 
 
