@@ -49,7 +49,7 @@ parkinglot("CC..C.CC..")"""
 
 language("unicornunicornunicorn")  """
 
-def spaces(n,x,y):
+""" def spaces(n,x,y):
     occupied = 0
     for i in range(n):  
         print(x[i],y[i])
@@ -57,10 +57,26 @@ def spaces(n,x,y):
             occupied += 1
     return(occupied)
             
-print(spaces(5,"CC..C",".CC.."))
+print(spaces(5,"CC..C",".CC..")) """
+
+def honiblock(x):
+    h_honi = 0
+    o_honi = 0
+    n_honi = 0
+    i_honi = 0
+    for i in range(h_honi):
+        if i == "H":
+            h_honi +=1
+        if i == "O":
+            o_honi +=1
+        if i == "N":
+            n_honi +=1
+        if i == "I":
+            i_honi +=1
+        print(h_honi + o_honi + n_honi + i_honi)
+            
+
+honiblock("H O N I")
 
 
-
-
-    
 
