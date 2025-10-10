@@ -1,4 +1,4 @@
-""" CafeItemList = [
+CafeItemList = [
         {"name": "1. Mia's boleens", "price": 15.99, "description": "A well-made collage of Mia's misspelled data types"},
         {"name": "2. olivia's cat's fuzzy toes", "price": 20.99, "description": "a chance to feel the fuzzy little toes of Olivia Lu's cats, Ollie and Ellie. You have a choice between the chunky one and the skinny one."},
         {"name": "3. Yakult Iced Coffee", "price": 6.99, "description": "a cool, refreshing coffee drink to cool you down on the worst and best of days."},
@@ -11,28 +11,20 @@
 
 
 for i in range(0, len(CafeItemList)):
-    print(CafeItemList[i]["name"])
-    int(input("what would you like to buy?")) """
-
-""" def language(x):
-       x = x.lower()
-    scount = x.count("s")
-    tcount = x.count("t")
-    if scount > tcount:
-         print("english")
-    elif tcount >= scount:
-                 print("french")
-    else:
-                 print("idk") """
-
-""" def parkinglot(x):
-    carcount = x.count("C")
-    carcount2 = x.count("CC")
-    carcount2 = carcount2 * 2
-    print(carcount-carcount2)
     
-parkinglot("CC..C.CC..")"""
+    int(input("what would you like to buy?"))
+    print(CafeItemList[i])
+
+
+
  
+
+
+
+
+
+
+
 
 """ def language(x):
     t = 0
@@ -47,9 +39,9 @@ parkinglot("CC..C.CC..")"""
     else:
         print("English") 
 
-language("unicornunicornunicorn")  """
+language("unicornunicornunicorn") 
 
-""" def spaces(n,x,y):
+def spaces(n,x,y):
     occupied = 0
     for i in range(n):  
         print(x[i],y[i])
@@ -57,7 +49,7 @@ language("unicornunicornunicorn")  """
             occupied += 1
     return(occupied)
             
-print(spaces(5,"CC..C",".CC..")) """
+print(spaces(5,"CC..C",".CC..")) 
 
 def honiblock(x):
     h_honi = 0
@@ -67,16 +59,13 @@ def honiblock(x):
     for i in range(h_honi):
         if i == "H":
             h_honi +=1
-        if i == "O":
+        elif i == "O":
             o_honi +=1
-        if i == "N":
+        elif i == "N":
             n_honi +=1
-        if i == "I":
+        elif i == "I":
             i_honi +=1
         print(h_honi + o_honi + n_honi + i_honi)
             
 
-honiblock("H O N I")
-
-
-
+honiblock("H O N I") """
