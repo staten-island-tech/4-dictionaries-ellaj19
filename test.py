@@ -11,8 +11,23 @@ CafeItemList = [
 
 
 for i in range(0, len(CafeItemList)):
-    print(CafeItemList[0]["name"])
+    print(CafeItemList[i]["name"])
 Cart = input("what would you like to buy?")
+consent = True
+ShoppingCart = CafeItemList[consent]
+
+while consent == True:
+    for item in CafeItemList:
+        if Cart in item["name"]:
+            print(f"{item["name"]} has been added to your cart")
+
+    consent = input("Would you like to buy another item?")
+    if consent == "yes":
+        Cart = input("What else you you like to buy?")
+        consent = True
+    if consent == "no":
+        print("good choice. let's check out.")
+        print("The items in your cart include:"f"{ShoppingCart}")
 
 
     
@@ -20,7 +35,6 @@ Cart = input("what would you like to buy?")
 
 
  
-
 
 
 
@@ -70,4 +84,4 @@ def honiblock(x):
         print(h_honi + o_honi + n_honi + i_honi)
             
 
-honiblock("H O N I") """
+honiblock("H O N I") """ 
