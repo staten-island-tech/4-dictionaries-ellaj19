@@ -9,25 +9,26 @@ CafeItemList = [
         ]
 
 
-
 for i in range(0, len(CafeItemList)):
-    print(CafeItemList[i]["name"])
+        print(CafeItemList[i]["name"])
 Cart = input("what would you like to buy?")
 consent = True
-ShoppingCart = CafeItemList[consent]
+list = []
 
 while consent == True:
     for item in CafeItemList:
         if Cart in item["name"]:
             print(f"{item["name"]} has been added to your cart")
+            list.append(item["name"])
 
-    consent = input("Would you like to buy another item?")
-    if consent == "yes":
-        Cart = input("What else you you like to buy?")
-        consent = True
-    if consent == "no":
-        print("good choice. let's check out.")
-        print("The items in your cart include:"f"{ShoppingCart}")
+            consent = input("Would you like to buy another item?")
+            if consent == "yes":
+                Cart = input("What else you you like to buy?")
+                consent = True
+            if consent == "no":
+                print("good choice. let's check out.")
+                
+    print(f"The items in your cart include: {list} ")
 
 
     
