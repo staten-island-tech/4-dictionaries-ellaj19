@@ -1,11 +1,11 @@
 CafeItemList = [
         {"name": "1. Mia's booleens", "price": 15.99, "description": "A well-made collage of Mia's misspelled data types"},
         {"name": "2. olivia's cat's fuzzy toes", "price": 20.99, "description": "a chance to feel the fuzzy little toes of Olivia Lu's cats, Ollie and Ellie. You have a choice between the chunky one and the skinny one."},
-        {"name": "3. Yakult Iced Coffee", "price": 6.99, "description": "a cool, refreshing coffee drink to cool you down on the worst and best of days."},
+        {"name": "3. Yakult Iced Coffee and a chili dog for mia specifically", "price": 6.99, "description": "a cool, refreshing coffee drink to cool you down on the worst and best of days."},
         {"name": "4. Salted Caramel Hot Chocolate (with peppermint crumbs)", "price": 6.99, "description": "A warm, comforting hot chocolate infused with notes of salted caramel and peppermint undertones"},
         {"name": "5. Strawberry Tiramisu (with a suprise bigback gooner fanfic)", "price": 12.99, "description": "A creamy, light dessert incorporating fresh strawberries, creamy marscapone, soft ladyfingers, and a generous douse of coffee. Comes with a book in collaboration with BigBack Liver's Library."},
         {"name": "6. maura's yaoi notebook", "price": 2.99, "description": "a magical notebook donated by my dear friend, filled with the tales of a faraway land that immediately transport you to a whole new dimension."},
-        {"name": "7. Melon Soda Float w/ a Side of Melon Bread"}
+        {"name": "7. Melon Soda Float w/ a Side of Melon Bread", "price": 7.77, "description": "A decadent, light, and fizzy melon drink paired with its bread counterpart, a piece of melon bread baked to perfection with a crispy exterior and a soft, fluffy interior."}
         ]
 
 
@@ -14,13 +14,14 @@ for i in range(0, len(CafeItemList)):
 Cart = input("what would you like to buy?")
 consent = True
 list = []
+total = 0 
 
 while consent == True:
     for item in CafeItemList:
         if Cart in item["name"]:
             print(f"{item["name"]} has been added to your cart")
             list.append(item["name"])
-
+            total += item["price"]
             consent = input("Would you like to buy another item?")
             if consent == "yes":
                 Cart = input("What else you you like to buy?")
@@ -28,8 +29,14 @@ while consent == True:
             if consent == "no":
                 print("good choice. let's check out.")
                 
-    print(f"The items in your cart include: {list} ")
-
+print(f"The items in your cart include: {list} ")
+consent = input("would you like to see your total? answer 'total'")
+if consent == "total":
+    print(f"your total before tax is {total}")
+    finaltotal = total * 1.08875
+    finaltotal = round(finaltotal , 2)
+    print(f"your final total is {finaltotal} after tax")
+    print("thank you for shopping with our cafe. have a wonderfully horrible day! teehee")
 
     
 
